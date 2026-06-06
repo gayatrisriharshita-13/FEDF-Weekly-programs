@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 id="counter">0</h1>
+<button onclick="updateCounter()">Click Me</button>
+
+<script>
+let count = 0;
+
+function updateCounter() {
+    console.time("DOM Update");
+
+    count++;
+
+    let items = "";
+    for (let i = 0; i < 10; i++) {
+        items += `<p>Item ${i}</p>`;
+    }
+
+    document.body.innerHTML = `
+        <h1>${count}</h1>
+        <button onclick="updateCounter()">Click Me</button>
+        ${items}
+    `;
+
+    console.timeEnd("DOM Update"); // ⏱ End timer
+}
+</script>
+
+</body>
+</html>

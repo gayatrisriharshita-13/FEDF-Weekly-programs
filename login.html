@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+<body>
+
+<h2>Login Form</h2>
+
+<form id="loginForm">
+    <label>Username:</label>
+    <input type="text" id="username" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+<h3 id="message"></h3>
+
+<script>
+    // Arrow function
+    const loginHandler = (event) => {
+        event.preventDefault();
+
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username && password) {
+            document.getElementById("message").innerText = "Welcome, " + username + "!";
+        } else {
+            document.getElementById("message").innerText = "Invalid login!";
+        }
+    };
+
+    document.getElementById("loginForm").addEventListener("submit", loginHandler);
+</script>
+
+</body>
+</html>

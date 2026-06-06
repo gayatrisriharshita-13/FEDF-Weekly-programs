@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>onFocus and onBlur Events Example</title>
+</head>
+<body>
+
+<h2>onFocus & onBlur Event Example</h2>
+
+Enter your name:
+<input type="text" id="name" onfocus="focusFunction()" onblur="blurFunction()">
+
+<p id="message"></p>
+
+<script>
+function focusFunction() 
+{
+    document.getElementById("message").innerHTML = "Input box is active (Focused)";
+    document.getElementById("name").style.backgroundColor = "red";
+}
+
+function blurFunction() 
+{
+    document.getElementById("message").innerHTML = "Input box lost focus (Blur)";
+    document.getElementById("name").style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mouse Events Example</title>
+</head>
+<body>
+
+<h2>Mouse Events Demo</h2>
+
+<div id="box"
+     style="width:200px; height:200px; background-color:lightblue; text-align:center; line-height:200px;"
+     onclick="clickEvent()"
+     ondblclick="doubleClickEvent()"
+     onmouseover="mouseOverEvent()"
+     onmouseout="mouseOutEvent()">
+     Hover or Click Me
+</div>
+
+<p id="message"></p>
+
+<script>
+function clickEvent() {
+    document.getElementById("message").innerHTML = "Mouse Clicked!";
+}
+
+function doubleClickEvent() {
+    document.getElementById("message").innerHTML = "Mouse Double Clicked!";
+}
+
+function mouseOverEvent() {
+    document.getElementById("box").style.backgroundColor = "yellow";
+    document.getElementById("message").innerHTML = "Mouse Over!";
+}
+
+function mouseOutEvent() {
+    document.getElementById("box").style.backgroundColor = "lightblue";
+    document.getElementById("message").innerHTML = "Mouse Out!";
+}
+</script>
+
+</body>
+</html>

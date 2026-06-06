@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Details</title>
+</head>
+<body>
+
+<h2>Employee Information</h2>
+
+<p id="output"></p>
+
+<script>
+    // Employee object
+    const employee = {
+        name: "Gayatri",
+        sal: 50000,
+        age: 22,
+        designation: "Software Developer"
+    };
+
+    // Object destructuring
+    const { name, sal } = employee;
+
+    // Display in HTML
+    document.getElementById("output").innerHTML =
+        "Employee Name: " + name + "<br>" +
+        "Employee Salary: " + sal;
+</script>
+
+</body>
+</html>
